@@ -4,7 +4,8 @@
       "Bash(pip install *)",
       "Bash(python data_fetcher.py 2026-05-16)",
       "PowerShell(Get-Command claude -ErrorAction SilentlyContinue)",
-      "PowerShell(claude --version)"
+      "PowerShell(claude --version)",
+      "Bash(python .claude/skills/capital-slice-positioning/scripts/data_fetcher.py 2026-05-17)"
     ]
   }
 }
