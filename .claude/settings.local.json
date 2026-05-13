@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(pip install *)",
-      "Bash(python data_fetcher.py 2026-05-16)"
+      "Bash(python data_fetcher.py 2026-05-16)",
+      "PowerShell(Get-Command claude -ErrorAction SilentlyContinue)",
+      "PowerShell(claude --version)"
     ]
   }
 }
