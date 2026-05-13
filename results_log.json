@@ -1,0 +1,17 @@
+[
+  {
+    "_schema": {
+      "date": "YYYY-MM-DD Saturday date",
+      "predictions": "Full saturday_scored.json snapshot at time of memo generation",
+      "chosen_locations": {
+        "truck_a": {"morning": "location_key", "afternoon": "location_key or null if staying"},
+        "truck_b": {"morning": "location_key", "afternoon": "location_key or null if staying"}
+      },
+      "actuals": {
+        "truck_a": {"morning_revenue": "dollars earned 7am-12pm", "afternoon_revenue": "dollars earned 2pm-8pm"},
+        "truck_b": {"morning_revenue": "dollars earned 7am-12pm", "afternoon_revenue": "dollars earned 2pm-8pm"}
+      },
+      "notes": "Optional: anything notable about the day"
+    }
+  }
+]
