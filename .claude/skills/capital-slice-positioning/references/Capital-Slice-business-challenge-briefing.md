@@ -1,5 +1,7 @@
 # Capital Slice: Briefing on Key Business Elements
 
+> **Note**: This file mirrors `briefing-docs/Capital-Slice-business-challenge-briefing.md` in the project root. If the original is updated, this copy may become stale. Refer to the original for the authoritative version.
+
 ## Business Overview
 
 You and your partners operate **Capitol Slice**, a premium pizza-by-the-slice operation in Washington DC. Your fleet consists of two mobile food trucks serving high-quality, fresh-baked pizza with fresh ingredients. The operation initially is focused on Saturdays—a strategic focus on peak weekend activity.

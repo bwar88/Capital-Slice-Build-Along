@@ -21,6 +21,12 @@ import requests
 # Manual events — fill these in before running each Thursday
 # Set to None if no event, or a string description + estimated attendance
 # ---------------------------------------------------------------------------
+# TODO: calibrate_weights.py
+# After 15+ Saturdays of logged results, a calibrate_weights.py script should:
+#   1. Read all entries from results_log.json
+#   2. Run regression on actuals vs. predictions
+#   3. Produce updated location_weights.json with data-driven coefficients
+# This will improve scoring accuracy over time.
 MANUAL_EVENTS = {
     "convention_center_event": None,
     # Example: "convention_center_event": {"description": "AWS Summit", "attendance_est": 10000},
@@ -73,9 +79,9 @@ def weather_factor(avg_temp_f: float, max_precip_pct: float, avg_wind_mph: float
     elif avg_temp_f < 55:
         score -= 1.0
     elif avg_temp_f > 95:
-        score -= 3.0
-    elif avg_temp_f > 88:
-        score -= 1.5
+        score -= 3.5
+    elif avg_temp_f > 85:
+        score -= 2.0
 
     # Wind penalty
     if avg_wind_mph > 25:
@@ -273,6 +279,37 @@ def fetch_dc_united(target_date: date) -> dict:
         return {"playing": False, "error": str(e)}
 
 
+def fetch_mystics(target_date: date) -> dict:
+    """ESPN unofficial API — Washington Mystics."""
+    print("  Fetching Mystics schedule...")
+    url = "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/teams/wsh/schedule"
+    try:
+        r = requests.get(url, timeout=10)
+        r.raise_for_status()
+        events = r.json().get("events", [])
+        target_str = target_date.isoformat()
+        for event in events:
+            event_date = event.get("date", "")[:10]
+            if event_date == target_str:
+                competitions = event.get("competitions", [{}])
+                comp = competitions[0] if competitions else {}
+                home = any(
+                    c.get("homeAway") == "home" and "Washington" in c.get("team", {}).get("displayName", "")
+                    for c in comp.get("competitors", [])
+                )
+                if home:
+                    return {
+                        "playing": True,
+                        "home": True,
+                        "start_time": event.get("date", "")[:16],
+                        "attendance_est": 10000,
+                    }
+        return {"playing": False}
+    except Exception as e:
+        print(f"    Warning: Mystics API error — {e}")
+        return {"playing": False, "error": str(e)}
+
+
 # ---------------------------------------------------------------------------
 # Scoring
 # ---------------------------------------------------------------------------
@@ -374,6 +411,7 @@ def main():
         "nationals_home_game": fetch_nationals(target_date),
         "capitals_home_game": fetch_capitals(target_date),
         "wizards_home_game": fetch_wizards(target_date),
+        "mystics_home_game": fetch_mystics(target_date),
         "dc_united_home_game": fetch_dc_united(target_date),
         **MANUAL_EVENTS,
     }

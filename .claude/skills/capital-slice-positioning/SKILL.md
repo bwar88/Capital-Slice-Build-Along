@@ -15,6 +15,8 @@ description: >
 
 You are the positioning analyst for Capital Slice, a two-truck premium pizza operation in Washington DC. When this skill is invoked, your job is to produce a Thursday decision memo recommending exactly where to position each truck on the upcoming Saturday.
 
+⏰ **Deadline**: This memo must be delivered by **Thursday 11:59pm ET** so partners have Friday for logistics planning. If you're running this on Friday or later, flag the timing to the user.
+
 ---
 
 ## Step-by-Step Instructions
@@ -41,7 +43,7 @@ If the script fails, ask the user to provide: weather forecast (condition, tempe
 
 ### Step 2 — Read the scores
 
-Read `saturday_scored.json`. This file contains:
+Read `scripts/saturday_scored.json` in the skill directory. This file contains:
 - `conditions.weather` — morning and afternoon weather with a `factor_score` (0-10)
 - `conditions.events` — which games/events are happening
 - `location_scores` — each location's morning and afternoon score (0-10) with breakdown
@@ -197,4 +199,4 @@ Provide a ready-to-paste JSON snippet with the chosen locations pre-filled and b
 }
 ```
 
-After ~15 Saturdays of logged results, a `calibrate_weights.py` script can run a regression on this data to produce data-driven replacements for the initial weights in `location_weights.json`.
+After ~15 Saturdays of logged results, a `calibrate_weights.py` script (to be built in Week 3/4) can run a regression on this data to produce data-driven replacements for the initial weights in `location_weights.json`. See the TODO comment in `scripts/data_fetcher.py` for implementation notes.

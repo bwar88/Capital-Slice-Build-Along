@@ -1,5 +1,7 @@
 # Capital Slice: Site Analysis Reference
 
+> **Note**: This file mirrors `briefing-docs/Capital Slice Site Analysis.md` in the project root. If the original is updated, this copy may become stale. Refer to the original for the authoritative version.
+
 ## Overview
 
 This document provides detailed strategic analysis of the 10 permitted locations for Capital Slice food truck operations. Each site is evaluated on strengths, weaknesses, and optimal deployment conditions.

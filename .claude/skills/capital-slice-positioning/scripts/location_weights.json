@@ -103,8 +103,8 @@
       "event_per_1k_attendees": 0.45,
       "market_day_bonus": 0.0
     },
-    "event_keys": ["capitals_home_game", "wizards_home_game"],
-    "notes": "Wizards/Capitals games drive this entirely. 18k capacity. Bad weather actively increases value (people prefer indoor events). Pre-game window 2-3 hours before tip is peak. Dead on non-game days."
+    "event_keys": ["capitals_home_game", "wizards_home_game", "mystics_home_game"],
+    "notes": "Wizards/Capitals/Mystics games drive this entirely. 18k capacity. Bad weather actively increases value (people prefer indoor events). Pre-game window 2-3 hours before tip is peak. Dead on non-game days."
   },
 
   "columbia_heights": {

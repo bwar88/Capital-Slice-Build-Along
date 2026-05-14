@@ -1,21 +1,21 @@
 {
   "target_date": "2026-05-17",
-  "generated_at": "2026-05-13T20:21:18",
+  "generated_at": "2026-05-14T11:10:23",
   "conditions": {
     "weather": {
       "morning": {
-        "temp_f": 72.0,
-        "precip_pct": 4,
-        "wind_mph": 1.8,
+        "temp_f": 72.4,
+        "precip_pct": 16,
+        "wind_mph": 4.4,
         "condition": "Mostly Sunny",
-        "factor_score": 10.0
+        "factor_score": 9.5
       },
       "afternoon": {
-        "temp_f": 89.3,
-        "precip_pct": 11,
-        "wind_mph": 3.4,
-        "condition": "Mostly Sunny",
-        "factor_score": 8.5
+        "temp_f": 87.3,
+        "precip_pct": 32,
+        "wind_mph": 4.3,
+        "condition": "Chance Showers And Thunderstorms",
+        "factor_score": 6.5
       }
     },
     "events": {
@@ -32,6 +32,9 @@
       "wizards_home_game": {
         "playing": false
       },
+      "mystics_home_game": {
+        "playing": false
+      },
       "dc_united_home_game": {
         "playing": false
       },
@@ -44,142 +47,142 @@
   "location_scores": {
     "eastern_market": {
       "morning": 10.0,
-      "afternoon": 4.95,
+      "afternoon": 3.55,
       "score_components": {
         "morning": {
           "base": 8.0,
-          "weather_adj": 3.5,
+          "weather_adj": 3.15,
           "market_day_bonus": 1.0
         },
         "afternoon": {
           "base": 2.5,
-          "weather_adj": 2.45
+          "weather_adj": 1.05
         }
       }
     },
     "dupont_circle": {
-      "morning": 9.5,
-      "afternoon": 6.75,
+      "morning": 9.25,
+      "afternoon": 5.75,
       "score_components": {
         "morning": {
           "base": 7.0,
-          "weather_adj": 2.5
+          "weather_adj": 2.25
         },
         "afternoon": {
           "base": 5.0,
-          "weather_adj": 1.75
+          "weather_adj": 0.75
         }
       }
     },
     "national_mall": {
       "morning": 10.0,
-      "afternoon": 10.0,
+      "afternoon": 8.8,
       "score_components": {
         "morning": {
           "base": 5.0,
-          "weather_adj": 6.0
+          "weather_adj": 5.4
         },
         "afternoon": {
           "base": 7.0,
-          "weather_adj": 4.2
+          "weather_adj": 1.8
         }
       }
     },
     "georgetown_waterfront": {
-      "morning": 10.0,
-      "afternoon": 10.0,
+      "morning": 9.85,
+      "afternoon": 9.45,
       "score_components": {
         "morning": {
           "base": 4.0,
-          "weather_adj": 6.5
+          "weather_adj": 5.85
         },
         "afternoon": {
           "base": 7.5,
-          "weather_adj": 4.55
+          "weather_adj": 1.95
         }
       }
     },
     "u_street_corridor": {
-      "morning": 4.0,
-      "afternoon": 6.9,
+      "morning": 3.8,
+      "afternoon": 6.1,
       "score_components": {
         "morning": {
           "base": 2.0,
-          "weather_adj": 2.0
+          "weather_adj": 1.8
         },
         "afternoon": {
           "base": 5.5,
-          "weather_adj": 1.4
+          "weather_adj": 0.6
         }
       }
     },
     "convention_center": {
-      "morning": 1.0,
-      "afternoon": 2.7,
+      "morning": 1.4,
+      "afternoon": 4.3,
       "score_components": {
         "morning": {
           "base": 1.0,
-          "weather_adj": 0.0
+          "weather_adj": 0.4
         },
         "afternoon": {
           "base": 1.5,
-          "weather_adj": 1.2
+          "weather_adj": 2.8
         }
       }
     },
     "capital_one_arena": {
-      "morning": 1.0,
-      "afternoon": 3.5,
+      "morning": 1.5,
+      "afternoon": 5.5,
       "score_components": {
         "morning": {
           "base": 1.0,
-          "weather_adj": 0.0
+          "weather_adj": 0.5
         },
         "afternoon": {
           "base": 2.0,
-          "weather_adj": 1.5
+          "weather_adj": 3.5
         }
       }
     },
     "columbia_heights": {
-      "morning": 6.5,
-      "afternoon": 5.55,
+      "morning": 6.35,
+      "afternoon": 4.95,
       "score_components": {
         "morning": {
           "base": 5.0,
-          "weather_adj": 1.5
+          "weather_adj": 1.35
         },
         "afternoon": {
           "base": 4.5,
-          "weather_adj": 1.05
+          "weather_adj": 0.45
         }
       }
     },
     "h_street_corridor": {
-      "morning": 4.5,
-      "afternoon": 6.75,
+      "morning": 4.25,
+      "afternoon": 5.75,
       "score_components": {
         "morning": {
           "base": 2.0,
-          "weather_adj": 2.5
+          "weather_adj": 2.25
         },
         "afternoon": {
           "base": 5.0,
-          "weather_adj": 1.75
+          "weather_adj": 0.75
         }
       }
     },
     "navy_yard": {
-      "morning": 6.0,
+      "morning": 5.7,
       "afternoon": 10.0,
       "score_components": {
         "morning": {
           "base": 3.0,
-          "weather_adj": 3.0
+          "weather_adj": 2.7
         },
         "afternoon": {
           "base": 5.0,
-          "weather_adj": 2.1,
+          "weather_adj": 0.9,
           "event_nationals_home_game": 11.2
         }
       }
