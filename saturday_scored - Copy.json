@@ -1,0 +1,188 @@
+{
+  "target_date": "2026-05-16",
+  "generated_at": "2026-05-13T16:57:47",
+  "conditions": {
+    "weather": {
+      "morning": {
+        "temp_f": 64.2,
+        "precip_pct": 0,
+        "wind_mph": 2.4,
+        "condition": "Mostly Sunny",
+        "factor_score": 10.0
+      },
+      "afternoon": {
+        "temp_f": 83.0,
+        "precip_pct": 17,
+        "wind_mph": 6.3,
+        "condition": "Mostly Sunny",
+        "factor_score": 9.5
+      }
+    },
+    "events": {
+      "nationals_home_game": {
+        "playing": true,
+        "home": true,
+        "start_time": "20:05",
+        "attendance_est": 32000,
+        "game_id": 822737
+      },
+      "capitals_home_game": {
+        "playing": false
+      },
+      "wizards_home_game": {
+        "playing": false
+      },
+      "dc_united_home_game": {
+        "playing": false
+      },
+      "convention_center_event": null,
+      "national_mall_event": null,
+      "h_street_event": null,
+      "u_street_event": null
+    }
+  },
+  "location_scores": {
+    "eastern_market": {
+      "morning": 10.0,
+      "afternoon": 5.65,
+      "score_components": {
+        "morning": {
+          "base": 8.0,
+          "weather_adj": 3.5,
+          "market_day_bonus": 1.0
+        },
+        "afternoon": {
+          "base": 2.5,
+          "weather_adj": 3.15
+        }
+      }
+    },
+    "dupont_circle": {
+      "morning": 9.5,
+      "afternoon": 7.25,
+      "score_components": {
+        "morning": {
+          "base": 7.0,
+          "weather_adj": 2.5
+        },
+        "afternoon": {
+          "base": 5.0,
+          "weather_adj": 2.25
+        }
+      }
+    },
+    "national_mall": {
+      "morning": 10.0,
+      "afternoon": 10.0,
+      "score_components": {
+        "morning": {
+          "base": 5.0,
+          "weather_adj": 6.0
+        },
+        "afternoon": {
+          "base": 7.0,
+          "weather_adj": 5.4
+        }
+      }
+    },
+    "georgetown_waterfront": {
+      "morning": 10.0,
+      "afternoon": 10.0,
+      "score_components": {
+        "morning": {
+          "base": 4.0,
+          "weather_adj": 6.5
+        },
+        "afternoon": {
+          "base": 7.5,
+          "weather_adj": 5.85
+        }
+      }
+    },
+    "u_street_corridor": {
+      "morning": 4.0,
+      "afternoon": 7.3,
+      "score_components": {
+        "morning": {
+          "base": 2.0,
+          "weather_adj": 2.0
+        },
+        "afternoon": {
+          "base": 5.5,
+          "weather_adj": 1.8
+        }
+      }
+    },
+    "convention_center": {
+      "morning": 1.0,
+      "afternoon": 1.9,
+      "score_components": {
+        "morning": {
+          "base": 1.0,
+          "weather_adj": 0.0
+        },
+        "afternoon": {
+          "base": 1.5,
+          "weather_adj": 0.4
+        }
+      }
+    },
+    "capital_one_arena": {
+      "morning": 1.0,
+      "afternoon": 2.5,
+      "score_components": {
+        "morning": {
+          "base": 1.0,
+          "weather_adj": 0.0
+        },
+        "afternoon": {
+          "base": 2.0,
+          "weather_adj": 0.5
+        }
+      }
+    },
+    "columbia_heights": {
+      "morning": 6.5,
+      "afternoon": 5.85,
+      "score_components": {
+        "morning": {
+          "base": 5.0,
+          "weather_adj": 1.5
+        },
+        "afternoon": {
+          "base": 4.5,
+          "weather_adj": 1.35
+        }
+      }
+    },
+    "h_street_corridor": {
+      "morning": 4.5,
+      "afternoon": 7.25,
+      "score_components": {
+        "morning": {
+          "base": 2.0,
+          "weather_adj": 2.5
+        },
+        "afternoon": {
+          "base": 5.0,
+          "weather_adj": 2.25
+        }
+      }
+    },
+    "navy_yard": {
+      "morning": 6.0,
+      "afternoon": 10.0,
+      "score_components": {
+        "morning": {
+          "base": 3.0,
+          "weather_adj": 3.0
+        },
+        "afternoon": {
+          "base": 5.0,
+          "weather_adj": 2.7,
+          "event_nationals_home_game": 11.2
+        }
+      }
+    }
+  }
+}
