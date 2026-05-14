@@ -1,0 +1,7 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated dashboard output (inside skill scripts dirs)
+.claude/skills/*/scripts/saturday_dashboard.html
