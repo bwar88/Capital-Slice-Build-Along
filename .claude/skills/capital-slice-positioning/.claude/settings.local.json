@@ -3,7 +3,8 @@
     "allow": [
       "Bash(dir \"c:\\\\Users\\\\BenWarshaw\\\\Desktop\\\\Capital-Slice-Build-Along\\\\.claude\\\\skills\\\\capital-slice-positioning\")",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(python .claude/skills/html-dashboard/scripts/generate_dashboard.py *)"
     ]
   }
 }

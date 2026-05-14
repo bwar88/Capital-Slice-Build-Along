@@ -61,8 +61,8 @@ Apply these rules to choose the best 4 slots (Truck A morning, Truck A afternoon
 - If the improvement is ≤1.5 points, recommend the truck stays put
 
 **Selection process:**
-1. Identify the top 4 highest-scoring slots across both time periods, ensuring no location conflicts
-2. Assign the top 2 morning scores to Truck A morning and Truck B morning
+1. For each location, calculate its **all-day stay value** = morning score + afternoon score
+2. Assign the top 2 morning slots by **all-day stay value**, not morning score alone — this ensures that when morning scores are tied, you prefer locations where staying put all day is also strong (e.g. a 10.0/10.0 location beats a 10.0/5.7 location). No location conflicts allowed.
 3. For each truck's afternoon, compare: (best available afternoon score) vs. (morning location's afternoon score + 1.5 relocation penalty). Choose whichever is higher
 4. If a tie exists, prefer the location with higher upside (event-driven locations over baseline locations)
 
@@ -131,7 +131,23 @@ Why:        [One sentence — the single biggest factor driving this rating]
 
 ---
 
-## Step 5 — Log this week's choices
+### Step 5 — Generate the visual dashboard
+
+After producing the memo, run the dashboard generator to create an HTML visual summary:
+
+```bash
+python .claude/skills/html-dashboard/scripts/generate_dashboard.py .claude/skills/capital-slice-positioning/scripts/saturday_scored.json
+```
+
+This produces `saturday_dashboard.html` in the `scripts/` folder alongside `saturday_scored.json`. Tell the user:
+
+> "Dashboard saved to `.claude/skills/capital-slice-positioning/scripts/saturday_dashboard.html` — open it in any browser."
+
+If the script is not found (skill not installed), skip this step silently.
+
+---
+
+## Step 6 — Log this week's choices
 
 After producing the memo, remind the user to record results after Saturday:
 
