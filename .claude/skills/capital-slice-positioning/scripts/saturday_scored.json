@@ -1,30 +1,30 @@
 {
-  "target_date": "2026-05-17",
-  "generated_at": "2026-05-14T11:10:23",
+  "target_date": "2026-05-16",
+  "generated_at": "2026-05-14T12:25:17",
   "conditions": {
     "weather": {
       "morning": {
-        "temp_f": 72.4,
-        "precip_pct": 16,
-        "wind_mph": 4.4,
+        "temp_f": 62.8,
+        "precip_pct": 0,
+        "wind_mph": 1.8,
         "condition": "Mostly Sunny",
-        "factor_score": 9.5
+        "factor_score": 10.0
       },
       "afternoon": {
-        "temp_f": 87.3,
-        "precip_pct": 32,
-        "wind_mph": 4.3,
-        "condition": "Chance Showers And Thunderstorms",
-        "factor_score": 6.5
+        "temp_f": 81.3,
+        "precip_pct": 15,
+        "wind_mph": 7.0,
+        "condition": "Mostly Sunny",
+        "factor_score": 9.5
       }
     },
     "events": {
       "nationals_home_game": {
         "playing": true,
         "home": true,
-        "start_time": "17:35",
+        "start_time": "20:05",
         "attendance_est": 32000,
-        "game_id": 822738
+        "game_id": 822737
       },
       "capitals_home_game": {
         "playing": false
@@ -44,145 +44,152 @@
       "u_street_event": null
     }
   },
+  "placements": {
+    "truck_a_morning": "eastern_market",
+    "truck_a_afternoon": "georgetown_waterfront",
+    "truck_b_morning": "national_mall",
+    "truck_b_afternoon": "national_mall",
+    "stays": ["truck_b"]
+  },
   "location_scores": {
     "eastern_market": {
       "morning": 10.0,
-      "afternoon": 3.55,
+      "afternoon": 5.65,
       "score_components": {
         "morning": {
           "base": 8.0,
-          "weather_adj": 3.15,
+          "weather_adj": 3.5,
           "market_day_bonus": 1.0
         },
         "afternoon": {
           "base": 2.5,
-          "weather_adj": 1.05
+          "weather_adj": 3.15
         }
       }
     },
     "dupont_circle": {
-      "morning": 9.25,
-      "afternoon": 5.75,
+      "morning": 9.5,
+      "afternoon": 7.25,
       "score_components": {
         "morning": {
           "base": 7.0,
-          "weather_adj": 2.25
+          "weather_adj": 2.5
         },
         "afternoon": {
           "base": 5.0,
-          "weather_adj": 0.75
+          "weather_adj": 2.25
         }
       }
     },
     "national_mall": {
       "morning": 10.0,
-      "afternoon": 8.8,
+      "afternoon": 10.0,
       "score_components": {
         "morning": {
           "base": 5.0,
-          "weather_adj": 5.4
+          "weather_adj": 6.0
         },
         "afternoon": {
           "base": 7.0,
-          "weather_adj": 1.8
+          "weather_adj": 5.4
         }
       }
     },
     "georgetown_waterfront": {
-      "morning": 9.85,
-      "afternoon": 9.45,
+      "morning": 10.0,
+      "afternoon": 10.0,
       "score_components": {
         "morning": {
           "base": 4.0,
-          "weather_adj": 5.85
+          "weather_adj": 6.5
         },
         "afternoon": {
           "base": 7.5,
-          "weather_adj": 1.95
+          "weather_adj": 5.85
         }
       }
     },
     "u_street_corridor": {
-      "morning": 3.8,
-      "afternoon": 6.1,
+      "morning": 4.0,
+      "afternoon": 7.3,
       "score_components": {
         "morning": {
           "base": 2.0,
-          "weather_adj": 1.8
+          "weather_adj": 2.0
         },
         "afternoon": {
           "base": 5.5,
-          "weather_adj": 0.6
+          "weather_adj": 1.8
         }
       }
     },
     "convention_center": {
-      "morning": 1.4,
-      "afternoon": 4.3,
+      "morning": 1.0,
+      "afternoon": 1.9,
       "score_components": {
         "morning": {
           "base": 1.0,
-          "weather_adj": 0.4
+          "weather_adj": 0.0
         },
         "afternoon": {
           "base": 1.5,
-          "weather_adj": 2.8
+          "weather_adj": 0.4
         }
       }
     },
     "capital_one_arena": {
-      "morning": 1.5,
-      "afternoon": 5.5,
+      "morning": 1.0,
+      "afternoon": 2.5,
       "score_components": {
         "morning": {
           "base": 1.0,
-          "weather_adj": 0.5
+          "weather_adj": 0.0
         },
         "afternoon": {
           "base": 2.0,
-          "weather_adj": 3.5
+          "weather_adj": 0.5
         }
       }
     },
     "columbia_heights": {
-      "morning": 6.35,
-      "afternoon": 4.95,
+      "morning": 6.5,
+      "afternoon": 5.85,
       "score_components": {
         "morning": {
           "base": 5.0,
-          "weather_adj": 1.35
+          "weather_adj": 1.5
         },
         "afternoon": {
           "base": 4.5,
-          "weather_adj": 0.45
+          "weather_adj": 1.35
         }
       }
     },
     "h_street_corridor": {
-      "morning": 4.25,
-      "afternoon": 5.75,
+      "morning": 4.5,
+      "afternoon": 7.25,
       "score_components": {
         "morning": {
           "base": 2.0,
-          "weather_adj": 2.25
+          "weather_adj": 2.5
         },
         "afternoon": {
           "base": 5.0,
-          "weather_adj": 0.75
+          "weather_adj": 2.25
         }
       }
     },
     "navy_yard": {
-      "morning": 5.7,
+      "morning": 6.0,
       "afternoon": 10.0,
       "score_components": {
         "morning": {
           "base": 3.0,
-          "weather_adj": 2.7
+          "weather_adj": 3.0
         },
         "afternoon": {
           "base": 5.0,
-          "weather_adj": 0.9,
+          "weather_adj": 2.7,
           "event_nationals_home_game": 11.2
         }
       }

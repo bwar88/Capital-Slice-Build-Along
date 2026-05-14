@@ -383,6 +383,57 @@ def score_location(location_key: str, loc: dict, weather: dict, events: dict) ->
 
 
 # ---------------------------------------------------------------------------
+# Placement optimizer
+# ---------------------------------------------------------------------------
+
+def determine_placements(location_scores):
+    THRESHOLD = 1.5
+
+    morning_ranked = sorted(
+        location_scores.items(),
+        key=lambda x: x[1]["morning"],
+        reverse=True,
+    )
+    truck_a_morning = morning_ranked[0][0]
+    truck_b_morning = next(k for k, _ in morning_ranked if k != truck_a_morning)
+
+    placements = {
+        "truck_a_morning": truck_a_morning,
+        "truck_b_morning": truck_b_morning,
+    }
+    stays = []
+    assigned_afternoons = set()
+
+    for truck_id, morning_loc, other_morning in [
+        ("a", truck_a_morning, truck_b_morning),
+        ("b", truck_b_morning, truck_a_morning),
+    ]:
+        stay_score = location_scores[morning_loc]["afternoon"]
+        afternoon_ranked = sorted(
+            location_scores.items(),
+            key=lambda x: x[1]["afternoon"],
+            reverse=True,
+        )
+        best_alt = next(
+            (k for k, _ in afternoon_ranked
+             if k != other_morning and k not in assigned_afternoons),
+            morning_loc,
+        )
+        best_alt_score = location_scores[best_alt]["afternoon"]
+
+        if best_alt == morning_loc or (best_alt_score - stay_score) <= THRESHOLD:
+            placements[f"truck_{truck_id}_afternoon"] = morning_loc
+            assigned_afternoons.add(morning_loc)
+            stays.append(f"truck_{truck_id}")
+        else:
+            placements[f"truck_{truck_id}_afternoon"] = best_alt
+            assigned_afternoons.add(best_alt)
+
+    placements["stays"] = stays
+    return placements
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -423,6 +474,8 @@ def main():
     for key, loc in location_weights.items():
         location_scores[key] = score_location(key, loc, weather, events)
 
+    placements = determine_placements(location_scores)
+
     # Build output
     output = {
         "target_date": target_date.isoformat(),
@@ -432,6 +485,7 @@ def main():
             "events": events,
         },
         "location_scores": location_scores,
+        "placements": placements,
     }
 
     with open(OUTPUT_FILE, "w") as f:

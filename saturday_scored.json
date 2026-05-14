@@ -41,6 +41,13 @@
       "u_street_event": null
     }
   },
+  "placements": {
+    "truck_a_morning": "eastern_market",
+    "truck_a_afternoon": "georgetown_waterfront",
+    "truck_b_morning": "national_mall",
+    "truck_b_afternoon": "national_mall",
+    "stays": ["truck_b"]
+  },
   "location_scores": {
     "eastern_market": {
       "morning": 10.0,
