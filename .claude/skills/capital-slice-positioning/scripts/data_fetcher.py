@@ -391,7 +391,7 @@ def determine_placements(location_scores):
 
     morning_ranked = sorted(
         location_scores.items(),
-        key=lambda x: x[1]["morning"],
+        key=lambda x: (x[1]["morning"], x[1]["morning"] + x[1]["afternoon"]),
         reverse=True,
     )
     truck_a_morning = morning_ranked[0][0]

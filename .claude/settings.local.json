@@ -19,7 +19,8 @@
       "Bash(git add *)",
       "Bash(git restore *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(python .claude/skills/capital-slice-positioning/scripts/data_fetcher.py 2026-06-06)"
     ]
   }
 }

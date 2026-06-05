@@ -1,20 +1,20 @@
 {
-  "target_date": "2026-05-23",
-  "generated_at": "2026-05-18T14:59:08",
+  "target_date": "2026-06-06",
+  "generated_at": "2026-06-05T10:46:03",
   "conditions": {
     "weather": {
       "morning": {
-        "temp_f": 62.2,
-        "precip_pct": 44,
-        "wind_mph": 5.0,
-        "condition": "Chance Rain Showers",
-        "factor_score": 8.5
+        "temp_f": 80.8,
+        "precip_pct": 0,
+        "wind_mph": 3.6,
+        "condition": "Partly Sunny",
+        "factor_score": 10.0
       },
       "afternoon": {
-        "temp_f": 72.6,
-        "precip_pct": 63,
-        "wind_mph": 6.0,
-        "condition": "Showers And Thunderstorms Likely",
+        "temp_f": 91.7,
+        "precip_pct": 31,
+        "wind_mph": 10.7,
+        "condition": "Mostly Sunny",
         "factor_score": 6.5
       }
     },
@@ -47,7 +47,7 @@
       "score_components": {
         "morning": {
           "base": 8.0,
-          "weather_adj": 2.45,
+          "weather_adj": 3.5,
           "market_day_bonus": 1.0
         },
         "afternoon": {
@@ -57,12 +57,12 @@
       }
     },
     "dupont_circle": {
-      "morning": 8.75,
+      "morning": 9.5,
       "afternoon": 5.75,
       "score_components": {
         "morning": {
           "base": 7.0,
-          "weather_adj": 1.75
+          "weather_adj": 2.5
         },
         "afternoon": {
           "base": 5.0,
@@ -71,12 +71,12 @@
       }
     },
     "national_mall": {
-      "morning": 9.2,
+      "morning": 10.0,
       "afternoon": 8.8,
       "score_components": {
         "morning": {
           "base": 5.0,
-          "weather_adj": 4.2
+          "weather_adj": 6.0
         },
         "afternoon": {
           "base": 7.0,
@@ -85,12 +85,12 @@
       }
     },
     "georgetown_waterfront": {
-      "morning": 8.55,
+      "morning": 10.0,
       "afternoon": 9.45,
       "score_components": {
         "morning": {
           "base": 4.0,
-          "weather_adj": 4.55
+          "weather_adj": 6.5
         },
         "afternoon": {
           "base": 7.5,
@@ -99,12 +99,12 @@
       }
     },
     "u_street_corridor": {
-      "morning": 3.4,
+      "morning": 4.0,
       "afternoon": 6.1,
       "score_components": {
         "morning": {
           "base": 2.0,
-          "weather_adj": 1.4
+          "weather_adj": 2.0
         },
         "afternoon": {
           "base": 5.5,
@@ -113,12 +113,12 @@
       }
     },
     "convention_center": {
-      "morning": 2.2,
+      "morning": 1.0,
       "afternoon": 4.3,
       "score_components": {
         "morning": {
           "base": 1.0,
-          "weather_adj": 1.2
+          "weather_adj": 0.0
         },
         "afternoon": {
           "base": 1.5,
@@ -127,12 +127,12 @@
       }
     },
     "capital_one_arena": {
-      "morning": 2.5,
+      "morning": 1.0,
       "afternoon": 5.5,
       "score_components": {
         "morning": {
           "base": 1.0,
-          "weather_adj": 1.5
+          "weather_adj": 0.0
         },
         "afternoon": {
           "base": 2.0,
@@ -141,12 +141,12 @@
       }
     },
     "columbia_heights": {
-      "morning": 6.05,
+      "morning": 6.5,
       "afternoon": 4.95,
       "score_components": {
         "morning": {
           "base": 5.0,
-          "weather_adj": 1.05
+          "weather_adj": 1.5
         },
         "afternoon": {
           "base": 4.5,
@@ -155,12 +155,12 @@
       }
     },
     "h_street_corridor": {
-      "morning": 3.75,
+      "morning": 4.5,
       "afternoon": 5.75,
       "score_components": {
         "morning": {
           "base": 2.0,
-          "weather_adj": 1.75
+          "weather_adj": 2.5
         },
         "afternoon": {
           "base": 5.0,
@@ -169,12 +169,12 @@
       }
     },
     "navy_yard": {
-      "morning": 5.1,
+      "morning": 6.0,
       "afternoon": 5.9,
       "score_components": {
         "morning": {
           "base": 3.0,
-          "weather_adj": 2.1
+          "weather_adj": 3.0
         },
         "afternoon": {
           "base": 5.0,
@@ -184,11 +184,12 @@
     }
   },
   "placements": {
-    "truck_a_morning": "eastern_market",
+    "truck_a_morning": "georgetown_waterfront",
     "truck_b_morning": "national_mall",
     "truck_a_afternoon": "georgetown_waterfront",
     "truck_b_afternoon": "national_mall",
     "stays": [
+      "truck_a",
       "truck_b"
     ]
   }
